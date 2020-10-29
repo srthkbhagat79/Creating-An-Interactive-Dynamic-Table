@@ -1,0 +1,55 @@
+<!--
+Name:Sarthak Bhagat
+email: Sarthak_bhagat@student.uml.edu
+Course name: GUI I
+Assingment #5- Creating an Interactive Dynamic Table
+File type: .html file
+Sources used: https://www.npmjs.com/package/rules-js
+https://www.w3schools.com
+https://getbootstrap.com/docs/4.0/components/carousel/
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/HW5.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>HW5-GUI</title>
+</head>
+
+
+<body>
+  <!-- This was used to create a caraousel at the top of the page -->
+  <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/calc.jpg" class="d-block w-100" alt="...">
+        <div class="row">
+          <div class="container-fluid">
+            <!-- The following allows the user to enter the values for the calculated results desired -->
+            <form>
+              <h3>Interactive Dynamic Multiplication Table</h3>
+              Enter Minimum Column Value <input name="minCol" id="mic" type="number"><br>
+              Enter Maximum Column Value <input name="maxCol" id="mac" type="number"><br>
+              Enter Minimum Row Value <input name="minRow" id="mir" type="number"><br>
+              Enter Maximum Row Value <input name="maxRow" id="mar" type="number"><br>
+              <input type="button" onclick="passIntoTable()" value="Submit" <!-- Button that will store the values. -->
+            </form>
+          </div>
+
+          <div class="container-fluid pt-3">
+            <!-- The following will give calculated results in the form of a table -->
+            <table class="table table-bordered" id="print_table">
+            </table>
+          </div>
+        </div>
+      </div>
+      <script src="js/HW5.js"></script>
+</body>
+
+</html>
